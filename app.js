@@ -28,7 +28,7 @@ main()
     });
 
 async function main() {
-  await mongoose.connect('mongodb://localhost:27017/AAkhriPraya'); // Local MongoDB URL
+  await mongoose.connect('mongodb+srv://TRY_OWN:2005@cluster0.6hhoa.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0'); 
 }
 
 app.set("view engine", "ejs");
@@ -39,7 +39,7 @@ app.engine("ejs", ejs_mate);
 app.use(express.static(path.join(__dirname, "/public")));
 
 const store = MongoStore.create({
-    mongoUrl: 'mongodb://localhost:27017/AAkhriPraya', // Local MongoDB URL
+    mongoUrl: 'mongodb+srv://TRY_OWN:2005@cluster0.6hhoa.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0',
     crypto: {
         secret: process.env.SECRET,
     },
